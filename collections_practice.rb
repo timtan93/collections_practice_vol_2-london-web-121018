@@ -1,34 +1,33 @@
 # your code goes here
 def begins_with_r(array)
-  i = 0
-  while i < array.length
-    if array[i][0] != "r"
-      return false
-    end
-    i += 1
+  r = true
+  array.each do |element|
+    r = false if element[0] != "r"
   end
-  true
+  r
 end
 
 def contain_a(array)
-  i = 0
-  contains_a = []
-  while i < array.length
-    if array[i].include? "a"
-      contains_a << array[i]
+  a_array = []
+  array.each do |element|
+    if element.include? ("a")
+      a_array << element
     end
-    i += 1
   end
-  contains_a
+  a_array
 end
 
 def first_wa(array)
-  i = 0
-  while i < array.length
-    if array[i][0] != "w" && array[i][1] != "a"
-      return false
+  wa = nil
+  array.each do |element|
+    if element.match (/wa/)
+      wa = element
+      break
     end
-    i += 1
   end
-  true
+  wa
+end
+
+def remove_non_strings(array)
+  array.grep(String)
 end
