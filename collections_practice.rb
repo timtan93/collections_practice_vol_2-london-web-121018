@@ -10,6 +10,7 @@ end
 def contain_a(array)
   a_array = []
   array.each do |element|
+<<<<<<< HEAD
     if element.include? ("a")
       a_array << element
     end
@@ -31,3 +32,11 @@ end
 def remove_non_strings(array)
   array.grep(String)
 end
+=======
+     if element.include?("a")
+       a_array << element
+  end
+  a_array
+end
+end
+>>>>>>> 9d42fd0169dc518f0a05f5ba6b4629ee399e44e9
